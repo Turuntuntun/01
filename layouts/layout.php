@@ -1,6 +1,3 @@
-<?
-    $rand = rand(1,100);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,22 +7,22 @@
     <link rel="stylesheet" href="/layouts/styles.css?<?=$rand?>">
 </head>
 <body>
-    <input id = 'firstVal' placeholder="Введите сумму">
-    <select id = 'firstName'>
+    <input class = 'value' placeholder="Введите сумму">
+    <select class = 'first_currency'>
         <?foreach ($result as $value) {?>
-            <option value = <?= $value['INDEX']/$value['NOMINAL'];?>>
+            <option value = <?= $value['INDEX']/$value['PAR'];?>>
                 <?= $value['NAME'];?>
             </option>
         <?}?>
     </select>
-    <select id = 'secondName'>
+    <select class = 'second_currency'>
         <?foreach ($result as $value) {?>
-            <option value = <?= $value['INDEX']/$value['NOMINAL'];?>>
+            <option value = <?= $value['INDEX']/$value['PAR'];?>>
                 <?= $value['NAME'];?>
             </option>
         <?}?>
     </select>
-    <input id = 'result' disabled>
+    <input class = 'result' disabled>
 </body>
 </html>
 
